@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'json'
 
-cities = {:cities=> ["Amsterdam","Berlin","New York","San Francisco","Tokyo"]}
+cities = {:cities => ["Amsterdam","Brazil","San Francisco","Berlin","New York","Tokyo","London"]}
 
 get '/' do
       content_type :json

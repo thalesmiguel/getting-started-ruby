@@ -11,8 +11,8 @@ dev:
           bundle exec thin -R config.ru -p 8080 start
         reload: true
 build:
-    steps:
-        - bundle-install
-        - script:
-            name: rspec
-            code: bundle exec rspec
+  steps:
+    - bundle-install
+    - script:
+        name: rspec
+        code: bundle exec rspec
