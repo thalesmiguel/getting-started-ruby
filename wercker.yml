@@ -18,10 +18,11 @@ build:
         code: bundle exec rspec
 push-to-releases:
   steps:
+    - bundle-install
     # Push to public docker repo Container Registry (CR)
     - internal/docker-push:
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
-        cmd: bundle install && bundle exec ruby /pipeline/source/main.rb
+        cmd: bundle exec ruby /pipeline/source/main.rb
 deploy-to-oke:
   box:
     id: alpine
