@@ -21,7 +21,7 @@ push-to-releases:
     # Push to public docker repo Container Registry (CR)
     - internal/docker-push:
         tag: $WERCKER_GIT_BRANCH-$WERCKER_GIT_COMMIT
-        cmd: ruby /pipeline/source/main.rb
+        cmd: bundle install && bundle exec ruby /pipeline/source/main.rb
 deploy-to-oke:
   box:
     id: alpine
