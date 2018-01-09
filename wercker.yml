@@ -1,14 +1,14 @@
 box:
   id: ruby:latest
   ports:
-    - "8080"
+    - "3000"
 
 dev:
   steps:
     - bundle-install
     - internal/watch:
         code: |
-          bundle exec thin -R config.ru -p 8080 start
+          bundle exec thin -R config.ru -p 3000 start
         reload: true
 build:
   steps:
